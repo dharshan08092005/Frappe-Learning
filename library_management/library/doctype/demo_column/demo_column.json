@@ -1,0 +1,111 @@
+{
+ "actions": [
+  {
+   "action": "aljk/bcn",
+   "action_type": "Route",
+   "label": "Hello"
+  }
+ ],
+ "allow_auto_repeat": 1,
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "DE-.#####",
+ "color": "get_color",
+ "creation": "2026-07-21 17:03:15.855138",
+ "default_view": "List",
+ "description": "Hello",
+ "doctype": "DocType",
+ "document_type": "System",
+ "documentation": "https://hello.com",
+ "engine": "InnoDB",
+ "field_order": [
+  "sample_demo_for_checking_width_section",
+  "name_of_user",
+  "table_view",
+  "status",
+  "icons_field",
+  "get_color"
+ ],
+ "fields": [
+  {
+   "fieldname": "sample_demo_for_checking_width_section",
+   "fieldtype": "Section Break",
+   "label": "Sample demo for checking width"
+  },
+  {
+   "fieldname": "name_of_user",
+   "fieldtype": "Link",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Name of user",
+   "options": "Members"
+  },
+  {
+   "fieldname": "table_view",
+   "fieldtype": "Table",
+   "label": "Table view",
+   "options": "Demo Column Width"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Secret",
+   "options": "completed\ncancelled\npending"
+  },
+  {
+   "fieldname": "icons_field",
+   "fieldtype": "Icon",
+   "label": "Icons Field"
+  },
+  {
+   "fieldname": "get_color",
+   "fieldtype": "Color",
+   "label": "Get Color"
+  }
+ ],
+ "grid_page_length": 50,
+ "icon": "angry",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-22 14:53:00.090255",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "Demo Column",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Orange",
+   "title": "pending"
+  },
+  {
+   "color": "Green",
+   "title": "completed"
+  },
+  {
+   "color": "Red",
+   "title": "cancelled"
+  }
+ ],
+ "translated_doctype": 1
+}

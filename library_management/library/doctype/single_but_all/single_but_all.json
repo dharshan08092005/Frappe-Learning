@@ -1,0 +1,436 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "SBA-.#####",
+ "creation": "2026-07-15 16:35:37.921786",
+ "doctype": "DocType",
+ "documentation": "https://docs.frappe.io/framework/user/en/introduction",
+ "engine": "InnoDB",
+ "field_order": [
+  "all_data_types_section",
+  "data_name_student_name",
+  "data_barcode_student_id",
+  "data_email_student_mail",
+  "data_phone_student_no",
+  "data_url_student_portfolio",
+  "data_isbn_roll_no",
+  "column_break_xzbs",
+  "attach_student_resume",
+  "attach_image_student_id",
+  "autocomplete_",
+  "male",
+  "female",
+  "color_favourite_color",
+  "academics_tab",
+  "academic_details_section",
+  "barcode_roll_no",
+  "float_cgpa",
+  "percent_cgpa_in_",
+  "currency_fees",
+  "date_admission_date",
+  "column_break_wsdo",
+  "time_college_time",
+  "duration_college_duraion",
+  "datetime_next_exam",
+  "int_years_of_study",
+  "settings_tab",
+  "user_settings_section",
+  "password_account_password",
+  "button_reset_password",
+  "select_mode_of_transport",
+  "signature_student_signature",
+  "text_editor_address",
+  "column_break_nzvb",
+  "text_about",
+  "geolocation_current_location",
+  "college_tab",
+  "college_details_section",
+  "heading_abc_college",
+  "html",
+  "icon_choose_college_icon",
+  "phone_college_phone",
+  "column_break_iwfr",
+  "image_college_principal",
+  "read_only_founded_on",
+  "section_break_adsb",
+  "rating",
+  "performance_tab",
+  "small_text_",
+  "long_text_",
+  "practice_tab",
+  "practice_programming_section",
+  "code_try_coding",
+  "html_editor_try_html",
+  "json_help_yourself_by_writing_json",
+  "markdown_editor_md_file_editor",
+  "tab_7_tab",
+  "table_books_needed",
+  "table_multiselect_authors",
+  "link_book_holder",
+  "dynamic_link"
+ ],
+ "fields": [
+  {
+   "fieldname": "all_data_types_section",
+   "fieldtype": "Section Break",
+   "label": "All Data Types"
+  },
+  {
+   "fieldname": "data_name_student_name",
+   "fieldtype": "Data",
+   "label": "Data Name Student Name",
+   "options": "Name"
+  },
+  {
+   "fieldname": "data_barcode_student_id",
+   "fieldtype": "Data",
+   "label": "Data Barcode Student ID",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "data_email_student_mail",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Data Email Student Mail"
+  },
+  {
+   "fieldname": "data_phone_student_no",
+   "fieldtype": "Data",
+   "label": "Data Phone Student No"
+  },
+  {
+   "fieldname": "data_url_student_portfolio",
+   "fieldtype": "Data",
+   "label": "Data URL Student Portfolio",
+   "options": "URL"
+  },
+  {
+   "fieldname": "data_isbn_roll_no",
+   "fieldtype": "Data",
+   "label": "Data IBAN Roll No",
+   "options": "IBAN"
+  },
+  {
+   "fieldname": "column_break_xzbs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_student_resume",
+   "fieldtype": "Attach",
+   "label": "Attach Student Resume"
+  },
+  {
+   "fieldname": "attach_image_student_id",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image Student ID"
+  },
+  {
+   "fieldname": "autocomplete_",
+   "fieldtype": "Autocomplete",
+   "label": "AutoComplete ....",
+   "options": "Hello\nworld\nyes\nno"
+  },
+  {
+   "default": "0",
+   "fieldname": "male",
+   "fieldtype": "Check",
+   "label": "Male"
+  },
+  {
+   "default": "0",
+   "fieldname": "female",
+   "fieldtype": "Check",
+   "label": "Female"
+  },
+  {
+   "fieldname": "color_favourite_color",
+   "fieldtype": "Color",
+   "label": "Color Favourite Color"
+  },
+  {
+   "fieldname": "academics_tab",
+   "fieldtype": "Tab Break",
+   "label": "Academics"
+  },
+  {
+   "fieldname": "academic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Academic Details"
+  },
+  {
+   "fieldname": "barcode_roll_no",
+   "fieldtype": "Barcode",
+   "label": "Barcode Roll No"
+  },
+  {
+   "fieldname": "float_cgpa",
+   "fieldtype": "Float",
+   "label": "Float CGPA"
+  },
+  {
+   "fieldname": "percent_cgpa_in_",
+   "fieldtype": "Percent",
+   "label": "Percent CGPA in %"
+  },
+  {
+   "fieldname": "currency_fees",
+   "fieldtype": "Currency",
+   "label": "Currency Fees"
+  },
+  {
+   "fieldname": "date_admission_date",
+   "fieldtype": "Date",
+   "label": "Date Admission Date"
+  },
+  {
+   "fieldname": "column_break_wsdo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_college_time",
+   "fieldtype": "Time",
+   "label": "Time College Time"
+  },
+  {
+   "fieldname": "duration_college_duraion",
+   "fieldtype": "Duration",
+   "label": "Duration College Duraion"
+  },
+  {
+   "fieldname": "datetime_next_exam",
+   "fieldtype": "Datetime",
+   "label": "Datetime Next Exam"
+  },
+  {
+   "fieldname": "settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Settings"
+  },
+  {
+   "fieldname": "user_settings_section",
+   "fieldtype": "Section Break",
+   "label": "User Settings"
+  },
+  {
+   "fieldname": "password_account_password",
+   "fieldtype": "Password",
+   "label": "Password Account Password"
+  },
+  {
+   "fieldname": "button_reset_password",
+   "fieldtype": "Button",
+   "label": "Button Reset Password"
+  },
+  {
+   "fieldname": "signature_student_signature",
+   "fieldtype": "Signature",
+   "label": "Signature Student Signature"
+  },
+  {
+   "columns": 3,
+   "fieldname": "text_editor_address",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Text Editor Address"
+  },
+  {
+   "fieldname": "geolocation_current_location",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation Current Location"
+  },
+  {
+   "fieldname": "column_break_nzvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "text_about",
+   "fieldtype": "Text",
+   "label": "Text About"
+  },
+  {
+   "fieldname": "select_mode_of_transport",
+   "fieldtype": "Select",
+   "label": "Select Mode of Transport",
+   "options": "Bus\nNike\nAuto\nWalk",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "college_tab",
+   "fieldtype": "Tab Break",
+   "label": "College"
+  },
+  {
+   "fieldname": "college_details_section",
+   "fieldtype": "Section Break",
+   "label": "College Details"
+  },
+  {
+   "fieldname": "heading_abc_college",
+   "fieldtype": "Heading",
+   "label": "Heading ABC College"
+  },
+  {
+   "fieldname": "html",
+   "fieldtype": "HTML",
+   "label": "HTML College Quote",
+   "options": "<p>Hard work Pays</p>"
+  },
+  {
+   "fieldname": "icon_choose_college_icon",
+   "fieldtype": "Icon",
+   "label": "Icon Choose College Icon"
+  },
+  {
+   "fieldname": "phone_college_phone",
+   "fieldtype": "Phone",
+   "label": "Phone College Phone"
+  },
+  {
+   "fieldname": "performance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "small_text_",
+   "fieldtype": "Small Text",
+   "label": "Small Text ...."
+  },
+  {
+   "fieldname": "long_text_",
+   "fieldtype": "Long Text",
+   "label": "Long Text ...."
+  },
+  {
+   "fieldname": "practice_tab",
+   "fieldtype": "Tab Break",
+   "label": "Practice"
+  },
+  {
+   "fieldname": "practice_programming_section",
+   "fieldtype": "Section Break",
+   "label": "Practice Programming"
+  },
+  {
+   "fieldname": "code_try_coding",
+   "fieldtype": "Code",
+   "label": "Code Try Coding"
+  },
+  {
+   "fieldname": "html_editor_try_html",
+   "fieldtype": "HTML Editor",
+   "label": "HTML Editor Try HTML"
+  },
+  {
+   "fieldname": "json_help_yourself_by_writing_json",
+   "fieldtype": "JSON",
+   "label": "JSON Help Yourself By writing JSON"
+  },
+  {
+   "fieldname": "markdown_editor_md_file_editor",
+   "fieldtype": "Markdown Editor",
+   "label": "Markdown Editor MD file editor"
+  },
+  {
+   "fieldname": "int_years_of_study",
+   "fieldtype": "Int",
+   "label": "int Years of Study"
+  },
+  {
+   "fieldname": "column_break_iwfr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_college_principal",
+   "fieldtype": "Image",
+   "label": "Image College Principal",
+   "options": "attach_image_student_id"
+  },
+  {
+   "fieldname": "read_only_founded_on",
+   "fieldtype": "Read Only",
+   "label": "Read Only Founded On",
+   "options": "1973"
+  },
+  {
+   "fieldname": "section_break_adsb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "tab_7_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tables and Links"
+  },
+  {
+   "fieldname": "table_books_needed",
+   "fieldtype": "Table",
+   "label": "Table Books needed",
+   "options": "Book Issue Item"
+  },
+  {
+   "fieldname": "link_book_holder",
+   "fieldtype": "Link",
+   "label": "Link Book Holder",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "dynamic_link",
+   "fieldtype": "Dynamic Link",
+   "label": "Dynamic Link",
+   "options": "link_book_holder"
+  },
+  {
+   "fieldname": "table_multiselect_authors",
+   "fieldtype": "Table MultiSelect",
+   "label": "Table Multiselect Authors",
+   "options": "Book Author"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "attach_image_student_id",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "max_attachments": 2,
+ "modified": "2026-07-21 21:35:25.778421",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "Single But All",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "data_name_student_name"
+}
