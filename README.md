@@ -1,5 +1,16 @@
 # Library Management System
 
+## Assignment 7
+### python-api-background-jobs Assignment
+
+path: 
+- `library_management/tasks.py`
+- `library_management/hooks.py`
+
+#### Output Link: https://drive.google.com/file/d/1O_NUNb_u90Jf54c39qnbQLKBvpPgS_Cb/view?usp=sharing
+
+---
+
 ## Assignment 6
 ### python-api-documentation Assignment
 
