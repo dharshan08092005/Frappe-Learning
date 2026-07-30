@@ -18,5 +18,5 @@ class TestDocument(Document):
 	# end: auto-generated types
 
 	def before_save(self):
-		if ! self.description:
+		if not self.description:
 			self.description = "Default Description"

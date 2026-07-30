@@ -2,29 +2,23 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-07-29 14:19:13.235864",
+ "creation": "2026-07-30 12:38:35.859408",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "testing_section",
   "description"
  ],
  "fields": [
   {
-   "fieldname": "testing_section",
-   "fieldtype": "Section Break",
-   "label": "Testing"
-  },
-  {
    "fieldname": "description",
    "fieldtype": "Data",
-   "label": "description"
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-29 14:21:42.113627",
+ "modified": "2026-07-30 12:56:27.879454",
  "modified_by": "Administrator",
  "module": "Library",
  "name": "Test Document",

@@ -24,6 +24,12 @@ export_python_type_annotations = True
 #     }
 # }
 
+# Scheduler
+scheduler_events = {
+    "daily" : [
+        "library_management.tasks.daily_maintanence"
+    ]
+}
 
 
 # Apps
