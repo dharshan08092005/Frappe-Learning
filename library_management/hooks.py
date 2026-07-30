@@ -5,6 +5,27 @@ app_description = "library management system"
 app_email = "voicepython1@gmail.com"
 app_license = "mit"
 
+app_include_js = "custom_deck.bundle.js"
+
+export_python_type_annotations = True
+
+# DOCUMENT EVENTS
+# doc_events = {
+#     "ToDo" : {
+#         "validate" : "library_management.library.api.validate"
+#     }
+# }
+
+# ACTION
+
+# doc_actions = {
+#     "ToDo" : {
+#         "assign" : "library_management.library.actions.on_assign"
+#     }
+# }
+
+
+
 # Apps
 # ------------------
 
