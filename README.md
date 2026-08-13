@@ -1,6 +1,17 @@
 # Library Management System
 
 ## Assignment 9
+### js-frappecall Assignment
+
+path: 
+- `library_management/library/doctype/heros/heros.js`
+- `library_management/api.py`
+
+#### Output Link: https://drive.google.com/drive/folders/1WhQwc53oun7m3GvRKSyBq5tJLAgEuI0D?usp=sharing
+
+---
+
+## Assignment 8
 ### python-api-utilities Assignment
 
 path: 

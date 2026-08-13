@@ -1,0 +1,25 @@
+{
+ "content": null,
+ "creation": "2026-07-31 14:51:45.380475",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "",
+ "idx": 0,
+ "modified": "2026-07-31 14:51:45.380475",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "demo-page",
+ "owner": "Administrator",
+ "page_name": "demo-page",
+ "restrict_to_domain": "Library",
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Demo Page"
+}

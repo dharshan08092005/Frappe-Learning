@@ -1,0 +1,1 @@
+console.log("Hello world learning App_include_js");

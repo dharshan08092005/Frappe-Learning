@@ -1,0 +1,31 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+    My Orders
+    {% if orders %}
+    
+            {% for order in orders %}
+            
+            {% endfor %}
+        
+        
+            
+                Order #
+                Date
+                Status
+                Total
+            
+        
+        
+                {{ order.name }}
+                {{ order.transaction_date }}
+                {{ order.status }}
+                {{ order.grand_total }}
+            
+    
+    {% else %}
+    No orders found.
+    {% endif %}
+
+{% endblock %}

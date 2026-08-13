@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="{{ favicon1 }}">
+
+  <title>{{ company_name }}</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #00509e;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>{{ company_name }}</h1>
+    <p>Empowering Businesses with Technology</p>
+  </header>
+
+  <div>
+    <svg>
+      <use href="assets/library_management/images/icons.svg#alert"></use>
+    </svg>
+    <svg>
+      <use href="assets/library_management/images/icons.svg#alien"></use>
+    </svg>
+    <svg>
+      <use href="assets/library_management/images/icons.svg#rupee"></use>
+    </svg>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Welcome to Our Portal {{ time }} </h2>
+      <p>This enterprise platform provides tools and resources to streamline your business operations.</p>
+    </div>
+
+    <div class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Cloud Infrastructure</li>
+        <li>Data Analytics</li>
+        <li>Cybersecurity Solutions</li>
+        <li>Enterprise Software Development</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 {{ company_name }} Inc. | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>

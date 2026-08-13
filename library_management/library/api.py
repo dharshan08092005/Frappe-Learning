@@ -68,7 +68,7 @@ def update_member_status():
 
     return records
 
-# Assignment 9
+# Assignment 8
 @frappe.whitelist()
 def custom_todo_manipulation():
     
@@ -88,4 +88,9 @@ def custom_todo_manipulation():
         "to_do_list": emails
     }
 
-
+# Practising Hook -> override_whitelisted_methods()
+@frappe.whitelist()
+def custom_get_count(doctype = "ToDo", filters=None, debug=False, cache=False):
+    # your custom implementation of the standard get_count method provided by frappe
+    count = frappe.db.count(doctype)
+    return {"custom_count" : count}

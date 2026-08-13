@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="card shadow-lg border-0 rounded-4">
+
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">{{ doc.title }}</h2>
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-bordered table-striped">
+
+                <tr>
+                    <th width="30%">Book ID</th>
+                    <td>{{ doc.name }}</td>
+                </tr>
+
+                <tr>
+                    <th>Title</th>
+                    <td>{{ doc.title }}</td>
+                </tr>
+
+                <tr>
+                    <th>Author</th>
+                    <td>{{ doc.author }}</td>
+                </tr>
+
+                <tr>
+                    <th>Price</th>
+                    <td>₹{{ doc.price }}</td>
+                </tr>
+
+                <tr>
+                    <th>Availability</th>
+                    <td>
+                        {% if doc.available %}
+                        <span class="badge bg-success">Available</span>
+                        {% else %}
+                        <span class="badge bg-danger">Not Available</span>
+                        {% endif %}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Aadhar</th>
+                    <td>{{ doc.aadhar }}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
