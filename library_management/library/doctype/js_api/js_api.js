@@ -134,6 +134,11 @@ frappe.ui.form.on("JS API", {
         frm.change_custom_button_type('Add Details', 'Set Value', 'primary');
         // frm.change_custom_button_type('Add Address', 'Set Value', 'primary');
         // frm.change_custom_button_type('Add Phone', 'Set Value', 'success');
+
+        frm.add_custom_button("Go to", () => {
+            // frappe.set_route("List", "JS API", "List", { "user_name": "Dharshan" });
+            frappe.set_route("List/Demo/Calendar");
+        })
     },
 
     // email(frm) {
@@ -187,6 +192,135 @@ frappe.ui.form.on("JS API", {
     //         let selected = frm.get_selected();
     //         console.log("selected : ", selected);
     //     })
+    // }
+
+    // refresh(frm) {
+    //     let dialog = new frappe.ui.Dialog({
+    //         title: "Form dialog",
+    //         fields: [
+    //             {
+    //                 label: "User Name",
+    //                 fieldname: "user_name",
+    //                 fieldtype: "HTML"
+    //             },
+    //         ]
+    //     })
+    //     dialog.show();
+
+    //     let wrapper = $(dialog.fields_dict.user_name.wrapper);
+    //     wrapper.html(`<div class = "new-class" style = "background-color:red;"></div>`);
+
+    //     let name = frappe.ui.form.make_control({
+    //         parent: wrapper.find(".new-class"),
+    //         df: {
+    //             label: "User Name",
+    //             fieldname: "new_user_name",
+    //             fieldtype: "Data",
+    //             reqd: true
+    //         },
+    //         render_input: true
+    //     })
+    // }
+
+    // on_submit(frm) {
+    //     frappe.meta.docfield_map["JS API"].email.formatter = (value) => {
+    //         if (value === "Sandeep@ex.com") {
+    //             return 'User Details Break';
+    //         }
+    //         else return value;
+    //     }
+    // },
+    refresh(frm) {
+        frappe.add_custom_button("NEw", () => {
+            frappe.require("/assets/library_management/js/utils.js", () => {
+                console.log("Loaded!");
+                hello_world();
+                hello_world();
+            });
+            console.log("This runs immediately");
+        })
+    },
+
+    // refresh(frm){
+    //     // console.log("Route:",frappe.get_route());
+    //     frappe.prompt([
+    //         {
+    //             label:"Name",
+    //             fieldname:"username",
+    //             fieldtype:"Data"
+    //         },
+    //         {
+    //             label:"Email",
+    //             fieldname:"email",
+    //             fieldtype:"Data"
+    //         }
+    //     ],(values) => {
+    //         frappe.msgprint(values.username + "\n" + values.email);
+    //     })
+    // },
+
+    refresh(frm) {
+        // frappe.confirm("Are you sure?",
+        //     ()=>{
+        //         frappe.msgprint("u clicked Yes");
+        //     },
+        //     ()=>{
+        //         frappe.msgprint("u clicked No");
+        //     }
+        // )
+        // frappe.warn('Are you surre you want to continue?',
+        //     '<h2>Read through before you continue</h2>',
+        //     () => {
+        //         frappe.msgprint("You clicked Continue");
+        //     },
+        //     'Continue', //primary_label
+        //     is_minimizable = true
+        // )
+        // frappe.show_alert({
+        //     message:"Hello",
+        //     indicator:"red",
+
+        // },15)
+
+        // frappe.show_progress('Loading..', 70, 100, 'Please wait');
+        //BELOW DOES NOT WORK BCS THE METHOD EXPEXTS ONLY 4 ARGS....
+        // frappe.show_progress({
+        //     title:"Progress Test",
+        //     count:10,
+        //     total:100,
+        //     description:"Heloo world description!"
+        // })
+
+    },
+
+    setup(frm) {
+        let dialog = new frappe.ui.Dialog({
+            title: "Get First Name",
+            fields: [
+                {
+                    label: "First Name",
+                    fieldname: "first_name",
+                    fieldtype: "Data"
+                }
+            ],
+            primary_acton_label: "Submit",
+            primary_action(values) {
+                frappe.new_doc('JS API', { "user_name": values.first_name });
+                dialog.hide();
+            }
+        })
+        dialog.show();
+    },
+
+    // onload_post_render(frm){
+    //     frappe.new_doc('JS API', { "user_name": "Sam" });
+    // }
+
+    // email(frm) {
+    //     frm.set_value("email", frappe.format('2200-02-01', {
+    //         fieldtype: 'Date',
+
+    //     }));
     // }
 
 })

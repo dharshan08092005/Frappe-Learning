@@ -32,38 +32,38 @@ app_include_css = "custom.bundle.css"
 #NOTE: web_include_js
 #NOTE: CSS FILE SHOULD END WITH .bundle.css
 
-web_include_js = "web_demo.bundle.js"
+# web_include_js = "web_demo.bundle.js"
 
 # ---------------------------------------------
 
 #NOTE: web_include_cs
 #NOTE: CSS FILE SHOULD END WITH .bundle.css
 
-web_include_css = "web_demo.bundle.css"
+# web_include_css = "web_demo.bundle.css"
 
 # ---------------------------------------------
 
 #NOTE: webform_include_js
 
-webform_include_js = {
-    'Members': 'public/js/web_demo.bundle.js'
-}
+# webform_include_js = {
+#     'Members': 'public/js/web_demo.bundle.js'
+# }
 
 # ---------------------------------------------
 
 #NOTE: webform_include_css
 
-webform_include_css = {
-    'Members': 'public/css/web_demo.bundle.css'
-}
+# webform_include_css = {
+#     'Members': 'public/css/web_demo.bundle.css'
+# }
 
 # ---------------------------------------------
 
 #NOTE: page_js
 
-page_js = {
-    'demo-page': 'public/js/demo_page.bundle.js'
-}
+# page_js = {
+#     'demo-page': 'public/js/demo_page.bundle.js'
+# }
 
 # ---------------------------------------------
 
