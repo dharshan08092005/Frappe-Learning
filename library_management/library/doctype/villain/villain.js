@@ -21,8 +21,15 @@ frappe.ui.form.on("Villain", {
             primary_action(values) {
                 frappe.new_doc('Villain', { "villain_name": values.first_name });
                 dialog.hide();
-            }
+            },
         })
         dialog.show();
     },
+    // before_submit(frm) {
+    //     frappe.msgprint("Hello.")
+    // },
+    on_submit(frm) {
+        frappe.msgprint("Hello.")
+    }
+    
 });

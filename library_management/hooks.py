@@ -242,16 +242,16 @@ default_mail_footer = """
 #NOTE: long worker -> hourly_long, daily_long, weekly_long, monthly_long
 #NOTE: all -> Triggered every 60 seconds, This can be configured via the scheduler_tick_interval key in common_site_config.json
 
-# scheduler_events = {
-#     'daily': [
-#         'library_management.tasks.daily_maintanence'
-#     ],
-#     'cron':{
-#         "* * * * *":[
-#             "library_management.tasks.message_print"
-#         ]
-#     }
-# }
+scheduler_events = {
+    'daily': [
+        'library_management.tasks.daily_maintanence'
+    ],
+    'cron':{
+        "* * * * *":[
+            "library_management.api.trigger_socket"
+        ]
+    }
+}
 
 # ---------------------------------------------
 

@@ -230,16 +230,16 @@ frappe.ui.form.on("JS API", {
     //         else return value;
     //     }
     // },
-    refresh(frm) {
-        frappe.add_custom_button("NEw", () => {
-            frappe.require("/assets/library_management/js/utils.js", () => {
-                console.log("Loaded!");
-                hello_world();
-                hello_world();
-            });
-            console.log("This runs immediately");
-        })
-    },
+    // refresh(frm) {
+    //     frappe.add_custom_button("NEw", () => {
+    //         frappe.require("/assets/library_management/js/utils.js", () => {
+    //             console.log("Loaded!");
+    //             hello_world();
+    //             hello_world();
+    //         });
+    //         console.log("This runs immediately");
+    //     })
+    // },
 
     // refresh(frm){
     //     // console.log("Route:",frappe.get_route());
@@ -259,58 +259,59 @@ frappe.ui.form.on("JS API", {
     //     })
     // },
 
-    refresh(frm) {
-        // frappe.confirm("Are you sure?",
-        //     ()=>{
-        //         frappe.msgprint("u clicked Yes");
-        //     },
-        //     ()=>{
-        //         frappe.msgprint("u clicked No");
-        //     }
-        // )
-        // frappe.warn('Are you surre you want to continue?',
-        //     '<h2>Read through before you continue</h2>',
-        //     () => {
-        //         frappe.msgprint("You clicked Continue");
-        //     },
-        //     'Continue', //primary_label
-        //     is_minimizable = true
-        // )
-        // frappe.show_alert({
-        //     message:"Hello",
-        //     indicator:"red",
+    // refresh(frm) {
+    // frappe.confirm("Are you sure?",
+    //     ()=>{
+    //         frappe.msgprint("u clicked Yes");
+    //     },
+    //     ()=>{
+    //         frappe.msgprint("u clicked No");
+    //     }
+    // )
+    // frappe.warn('Are you surre you want to continue?',
+    //     '<h2>Read through before you continue</h2>',
+    //     () => {
+    //         frappe.msgprint("You clicked Continue");
+    //     },
+    //     'Continue', //primary_label
+    //     is_minimizable = true
+    // )
+    // frappe.show_alert({
+    //     message:"Hello",
+    //     indicator:"red",
 
-        // },15)
+    // },15)
 
-        // frappe.show_progress('Loading..', 70, 100, 'Please wait');
-        //BELOW DOES NOT WORK BCS THE METHOD EXPEXTS ONLY 4 ARGS....
-        // frappe.show_progress({
-        //     title:"Progress Test",
-        //     count:10,
-        //     total:100,
-        //     description:"Heloo world description!"
-        // })
+    // frappe.show_progress('Loading..', 70, 100, 'Please wait');
+    //BELOW DOES NOT WORK BCS THE METHOD EXPEXTS ONLY 4 ARGS....
+    // frappe.show_progress({
+    //     title:"Progress Test",
+    //     count:10,
+    //     total:100,
+    //     description:"Heloo world description!"
+    // })
 
-    },
+    // },
 
-    setup(frm) {
-        let dialog = new frappe.ui.Dialog({
-            title: "Get First Name",
-            fields: [
-                {
-                    label: "First Name",
-                    fieldname: "first_name",
-                    fieldtype: "Data"
-                }
-            ],
-            primary_acton_label: "Submit",
-            primary_action(values) {
-                frappe.new_doc('JS API', { "user_name": values.first_name });
-                dialog.hide();
-            }
-        })
-        dialog.show();
-    },
+    // setup(frm) {
+    //     let dialog = new frappe.ui.Dialog({
+    //         title: "Get First Name",
+    //         fields: [
+    //             {
+    //                 label: "First Name",
+    //                 fieldname: "first_name",
+    //                 fieldtype: "Data"
+    //             }
+    //         ],
+    //         primary_acton_label: "Submit",
+    //         primary_action(values) {
+    //             server_action: "library_management.library_management.api.greet",
+    //                 // frappe.new_doc('JS API', { "user_name": values.first_name });
+    //                 dialog.hide();
+    //         }
+    //     })
+    //     dialog.show();
+    // },
 
     // onload_post_render(frm){
     //     frappe.new_doc('JS API', { "user_name": "Sam" });
@@ -323,6 +324,141 @@ frappe.ui.form.on("JS API", {
     //     }));
     // }
 
+    // refresh(frm) {
+    //     new frappe.ui.form.MultiSelectDialog({
+    //         doctype: "Members",
+    //         target: frm,
+    //         setters: {
+    //             membership_type: "Free",
+    //         },
+    //         add_filters_group: true,
+    //         // date_field: "join_date",
+    //         columns: ["member_name", "membership_type", "join_date"],
+    //         get_query() {
+    //             return {
+    //                 filters: { docstatus: ['!=', 2] }
+    //             }
+    //         },
+    //         action(selections) {
+    //             console.log(selections);
+    //         }
+    //     });
+    // }
+
+    // refresh(frm) {
+    //     const d = new frappe.ui.Dialog({
+    //         title: __("Create Logs"),
+    //         fields: [
+    //             {
+    //                 fieldname: "logs",
+    //                 fieldtype: "Table",
+    //                 label: "Logs",
+    //                 in_place_edit: true,
+    //                 reqd: 1,
+    //                 fields: [
+    //                     {
+    //                         fieldname: "log_type",
+    //                         label: "Log Type",
+    //                         fieldtype: "Select",
+    //                         options: "IN\nOUT\n",
+    //                         in_list_view: 1,
+    //                         reqd: 1,
+    //                     },
+    //                     {
+    //                         fieldname: "time",
+    //                         label: "Time",
+    //                         fieldtype: "Time",
+    //                         in_list_view: 1,
+    //                         reqd: 1,
+    //                     }
+    //                 ]
+    //             }
+    //         ],
+    //         on_add_row: (idx) => {
+    //             // idx = visible idx of the row starting from 1
+    //             // eg. set `log_type` as alternating IN/OUT in the table on row addition
+    //             let data_id = idx - 1;
+    //             let logs = dialog.fields_dict.logs;
+    //             let log_type = (data_id % 2) == 0 ? "IN" : "OUT";
+
+    //             logs.df.data[data_id].log_type = log_type;
+    //             logs.grid.refresh();
+    //         },
+    //         primary_action(values) {
+    //             server_action:"library_management.library_management.api.new_sign_up"
+    //         },
+    //         primary_action_label:"Print"
+    //     })
+    //     d.show();
+    // }
+
+    // refresh(frm) {
+    //     let dialog = new frappe.ui.Dialog({
+    //         title: "Form dialog",
+    //         fields: [
+    //             {
+    //                 label: "User Name",
+    //                 fieldname: "user_name",
+    //                 fieldtype: "HTML"
+    //             },
+    //         ]
+    //     })
+    //     dialog.show();
+
+    //     let wrapper = $(dialog.fields_dict.user_name.wrapper);
+    //     wrapper.html(`<div class = "new-class"></div>`);
+
+    //     const chart = new frappe.ui.RealtimeChart(
+    //         wrapper.find(".new-class"),
+    //         "test_event",
+    //         8,
+    //         {
+    //             labels: ["1", "2", "3", "4"],
+    //             datasets: [
+    //                 {
+    //                     values: [5, 8, 3, 10]
+    //                 }
+    //             ]
+    //         }
+    //     );
+    //     chart.show();
+    // }
+
+    // refresh(frm) {
+    //     const scanner = new frappe.ui.Scanner({
+    //         dialog: true,
+    //         multiple: false,
+    //         on_scan(data) {
+    //             console.log("data :", data);
+    //         }
+    //     })
+    // }
+
+    refresh() {
+        //get_doc
+        // let doc = frappe.db.get_doc('JS API', null, filters = { "user_name": ["like", "S%"] }).then(
+        //     (doc) => {
+        //         console.log(doc);
+        //     }
+        // );
+        //get_list
+        // let doc1 = frappe.db.get_list("JS API", {
+        //     fields:['user_name','email'],
+        //     filters:{
+        //         docstatus : ["!=",2]
+        //     }
+        // }).then((res)=>{
+        //     console.log(res);
+        // });
+        //get_value
+        // let doc2 = frappe.db.get_value("JS API","JSAPI-0015","phone").then((res)=>{
+        //     console.log("get_value() single value:",res);
+        // })
+        //set_value
+        frappe.db.set_value("JS API", "JSAPI-0015", "user_name","Somu Kumar").then((res)=>{
+            console.log("set_value() single value:",res);
+        });
+    }
 })
 
 function toggle_save_button(frm) {

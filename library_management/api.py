@@ -1,5 +1,6 @@
 import frappe
 from library_management.search import MyAppSearch
+import random
 
 @frappe.whitelist(allow_guest=True)
 def new_sign_up(username, email, phone):
@@ -58,3 +59,17 @@ def accept_task_subject(task_subject):
     doc.save()
 
     return doc.name
+
+
+@frappe.whitelist()
+def greet():
+    return "hello"
+
+def trigger_socket():
+    frappe.publish_realtime(
+        event="test_event",
+        message={
+            "label": frappe.utils.now_datetime().strftime("%H:%M"),
+            "value": random.randint(1, 100)
+        }
+    )
