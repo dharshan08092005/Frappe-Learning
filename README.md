@@ -1,5 +1,14 @@
 # Library Management System
 
+## ASSIGNMENT NUMBER THERIYALA BRO 1
+### bench-cli-sitemanagement Assignment
+
+path:
+- `library_management/library_management/commands/commands.py`
+- `library_management/library_management/commands/__init__.py`
+
+#### Output Link: https://drive.google.com/file/d/10ksBhbZAylt2Gy1X8zmed-51wZYIJ1An/view?usp=sharing
+
 ## Assignment 10
 ### js-frappe-realtime Assignment
 

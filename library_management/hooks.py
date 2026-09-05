@@ -366,15 +366,15 @@ signup_form_template = "library_management/templates/signup-form.html"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-add_to_apps_screen = [
-    {
-        "name": "Library",
-        "logo": "/assets/library_management/images/favicon.png",
-        "title": "Library Management",
-        "route": "/library_management",
-        "has_permission": "library_management.api.has_app_permission"
-    }
-]
+# add_to_apps_screen = [
+#     {
+#         "name": "Library",
+#         "logo": "/assets/library_management/images/favicon.png",
+#         "title": "Library Management",
+#         "route": "/library_management",
+#         "has_permission": "library_management.api.has_app_permission"
+#     }
+# ]
 
 # Includes in <head>
 # ------------------

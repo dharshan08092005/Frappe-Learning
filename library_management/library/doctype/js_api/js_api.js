@@ -434,7 +434,7 @@ frappe.ui.form.on("JS API", {
     //     })
     // }
 
-    refresh() {
+    // refresh() {
         //get_doc
         // let doc = frappe.db.get_doc('JS API', null, filters = { "user_name": ["like", "S%"] }).then(
         //     (doc) => {
@@ -455,9 +455,20 @@ frappe.ui.form.on("JS API", {
         //     console.log("get_value() single value:",res);
         // })
         //set_value
-        frappe.db.set_value("JS API", "JSAPI-0015", "user_name","Somu Kumar").then((res)=>{
-            console.log("set_value() single value:",res);
-        });
+        // frappe.db.set_value("JS API", "JSAPI-0015", "user_name","Somu Kumar").then((res)=>{
+        //     console.log("set_value() single value:",res);
+        // });
+    // }
+    refresh(frm){
+        frappe.call({
+            method:"library_management.api.test_logger",
+            args:{
+                name:"Santhosh"
+            },
+            callback: function(r){
+                console.log(r.message);
+            }
+        })
     }
 })
 

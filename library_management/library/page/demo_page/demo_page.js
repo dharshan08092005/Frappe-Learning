@@ -90,6 +90,46 @@
 // 	);
 // 	chart.start_updating();
 // }
+// frappe.pages["demo-page"].on_page_load = function (wrapper) {
+
+//     let page = frappe.ui.make_app_page({
+//         parent: wrapper,
+//         title: "Realtime Chart Test",
+//         single_column: true
+//     });
+
+//     $(wrapper).find(".layout-main-section").html(`
+//         <div id="realtime-chart" style="margin-top: 20px;"></div>
+//     `);
+
+//     const data = {
+//         datasets: [
+//             {
+//                 name: "Temperature",
+//                 values: []
+//             }
+//         ]
+//     };
+
+//     const chart = new frappe.ui.RealtimeChart(
+//         "#realtime-chart",
+//         "temperature_event",
+//         8,
+//         {
+//             title: "Realtime Temperature",
+//             data: {
+//                 datasets: [
+//                     {
+//                         name: "Temperature",
+//                         values: []
+//                     }
+//                 ]
+//             }
+//         }
+//     );
+
+//     chart.start_updating();
+// };
 frappe.pages["demo-page"].on_page_load = function (wrapper) {
 
     let page = frappe.ui.make_app_page({
@@ -103,23 +143,46 @@ frappe.pages["demo-page"].on_page_load = function (wrapper) {
     `);
 
     const data = {
-        datasets: [
-            {
-                name: "Temperature",
-                values: []
-            }
-        ]
+        title: "Realtime Temperature",
+
+        data: {
+            labels: [
+                "10:00",
+                "10:01",
+                "10:02",
+                "10:03",
+                "10:04"
+            ],
+            datasets: [
+                {
+                    name: "Temperature",
+                    values: [22, 24, 23, 25, 27]
+                }
+            ]
+        },
+
+        type: "line"
     };
 
+    const element = document.querySelector("#realtime-chart");
+
     const chart = new frappe.ui.RealtimeChart(
-        "#realtime-chart",
+        element,
         "temperature_event",
-        8,
-        {
-            title: "Realtime Temperature",
-            data: data,
-        }
+        40,
+        data
     );
 
     chart.start_updating();
+
+    const datas = [["10:06", 22], ["10:07", 23], ["10:08", 24], ["10:09", 20], ["10:10", 24], ["10:11", 27], ["10:12", 23], ["10:13", 20], ["10:14", 24], ["10:15", 27]]
+
+    for (let i = 0; i < datas.length; i++) {
+        setTimeout(() => {
+            chart.update_chart(
+                datas[i][0],
+                [datas[i][1]]
+            );
+        },(i+1) * 1000);
+    }
 };

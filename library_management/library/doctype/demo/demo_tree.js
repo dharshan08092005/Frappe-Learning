@@ -3,7 +3,7 @@
 
 frappe.treeview_settings["Demo"] = {
     // Header
-    breadcrumb: "Build",
+    breadcrumb: "Tree",
     title: "Demo Tree",
 
     // Method that loads child nodes
@@ -68,12 +68,12 @@ frappe.treeview_settings["Demo"] = {
     // Show custom toolbar
     extend_toolbar: true,
 
-    toolbar: [
-        {
-            label: "Add Child",
-            btnClass: "hidden-xs",
-            condition: node => node && node.expandable,
-            click: node => frappe.treeview_settings["Demo"].add_node(node),
-        },
-    ],
+    // toolbar: [
+    //     {
+    //         label: "Add Child",
+    //         btnClass: "hidden-xs",
+    //         condition: node => node && node.expandable,
+    //         click: node => frappe.treeview_settings["Demo"].add_node(node),
+    //     },
+    // ],
 };

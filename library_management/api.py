@@ -62,14 +62,35 @@ def accept_task_subject(task_subject):
 
 
 @frappe.whitelist()
-def greet():
+def greett():
     return "hello"
 
+@frappe.whitelist()
 def trigger_socket():
+    data = {
+        "label": frappe.utils.now_datetime().strftime("%H:%M:%S"),
+        "value": random.randint(1, 100)
+    }
+
     frappe.publish_realtime(
-        event="test_event",
-        message={
-            "label": frappe.utils.now_datetime().strftime("%H:%M"),
-            "value": random.randint(1, 100)
-        }
+        "temperature_event",
+        message=data
     )
+
+    return data
+    
+import frappe
+
+logger = frappe.logger("student_api", allow_site=True)
+
+
+@frappe.whitelist()
+def greet(name):
+    logger.info("===== GREET FUNCTION STARTED =====")
+    logger.info(f"greet API called with name={name}")
+
+    message = f"Hello {name}"
+
+    logger.info(f"Returning message: {message}")
+
+    return message
