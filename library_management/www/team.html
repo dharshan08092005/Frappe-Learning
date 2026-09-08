@@ -1,0 +1,75 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f7fa;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .team-container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 25px;
+    }
+
+    .team-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .team-member {
+        padding: 15px 20px;
+        margin-bottom: 12px;
+        background-color: #f8f9fa;
+        border-left: 5px solid #3498db;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+    .team-member:hover {
+        background-color: #eaf4fc;
+        transform: translateX(5px);
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .email {
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-top: 5px;
+    }
+</style>
+
+<div class="team-container">
+
+    <h1>Our Team</h1>
+
+    <ul class="team-list">
+        {% for user in users %}
+        <li class="team-member">
+            <div class="name">
+                {{ user.full_name }}
+            </div>
+
+            <div class="email">
+                {{ user.email }}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>

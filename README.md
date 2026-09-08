@@ -1,5 +1,12 @@
 # Library Management System
 
+## ASSIGNMENT 17
+### Assignment: guides-1 Assignment
+
+path:
+- `library_management/library_management/hooks.py` Line - 318
+- `library_management/library_management/fixtures/client_script.json`
+
 ## ASSIGNMENT NUMBER THERIYALA BRO 1
 ### bench-cli-sitemanagement Assignment
 

@@ -315,6 +315,8 @@ additional_timeline_content = {
 #     "ToDo",
 #     {"dt":"Test Document", "filters":[["description","like","D%"]]}
 # ]
+#Assigment 15
+fixtures = ["Client Script"]
 
 #NOTE: permission_query_conditions
 

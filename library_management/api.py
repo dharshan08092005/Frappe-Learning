@@ -94,3 +94,9 @@ def greet(name):
     logger.info(f"Returning message: {message}")
 
     return message
+
+@frappe.whitelist(allow_guest=True, rate_limit=10)
+def limited_greeting():
+    logger = frappe.logger()
+    logger.info("Endpoint Called")
+    frappe.response['message'] = "Hello, Rate Limited World!"

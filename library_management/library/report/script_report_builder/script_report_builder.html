@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Report Builder</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="panel panel-primary">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Members Report
+                </h3>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Membership Type:</strong>
+                        <span class="label label-info">
+                            <%= filters.membership_type || "All" %>
+                        </span>
+                    </div>
+
+                    <div class="col-md-6 text-right">
+                        <strong>Total Members:</strong>
+                        <span class="badge">
+                            <%= data.length %>
+                        </span>
+                    </div>
+                </div>
+
+                <br>
+
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Email</th>
+                            <th>Membership Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% for (var i=0; i < data.length; i++) { %>
+                            <tr>
+                                <td>
+                                    <%= i + 1 %>
+                                </td>
+                                <td>
+                                    <%= data[i].email %>
+                                </td>
+                                <td>
+                                    <%= data[i].membership_type %>
+                                </td>
+                                <td>
+                                    <% if (data[i].status==="Active" ) { %>
+                                        <span class="label label-success">
+                                            <%= data[i].status %>
+                                        </span>
+                                        <% } else if (data[i].status==="Inactive" ) { %>
+                                            <span class="label label-danger">
+                                                <%= data[i].status %>
+                                            </span>
+                                            <% } else { %>
+                                                <span class="label label-warning">
+                                                    <%= data[i].status %>
+                                                </span>
+                                                <% } %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
