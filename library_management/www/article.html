@@ -1,0 +1,5 @@
+<h1>Latest News</h1>
+<ul> {% for article in articles %} <li>
+        <a href="/Article/{{ article.name }}">{{ article.title }}</a>
+    </li> {% endfor %}
+</ul>
