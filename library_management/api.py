@@ -95,6 +95,7 @@ def greet(name):
 
     return message
 
+# NOTE: Assignment 20
 @frappe.whitelist(allow_guest=True, rate_limit=10)
 def limited_greeting():
     logger = frappe.logger()

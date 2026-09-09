@@ -8,6 +8,7 @@
 
 | # | Assignment Name | Topic | Output Link |
 | :--- | :--- | :--- | :--- |
+| **20** | [Assignment 20](#assignment-20---others) | `others` (Others) | — |
 | **19** | [Assignment 19](#assignment-19---guides-2) | `guides-2` (Development & Testing) | — |
 | **17** | [Assignment 17](#assignment-17---guides-1) | `guides-1` (Fixtures & Client Scripts) | — |
 | **—** | [bench-cli-sitemanagement](#assignment---bench-cli-sitemanagement) | Site Management CLI Commands | [🔗 View Output](https://drive.google.com/file/d/10ksBhbZAylt2Gy1X8zmed-51wZYIJ1An/view?usp=sharing) |
@@ -21,6 +22,13 @@
 
 ---
 
+## Assignment 20 - others
+- **Topic:** `others Assignment`
+- **File Paths:**
+  - `library_management/library/api.py`
+
+---
+
 ## Assignment 19 - guides-3
 
 - **Topic:** `guides-3 Assignment`
@@ -29,6 +37,7 @@
   - `library_management/www/article.py`
   - `library_management/library/doctype/article/article.py`
   - `library_management/library/doctype/article/test_article.py`
+  
 ---
 
 ## Assignment 17 - guides-1
