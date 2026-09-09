@@ -2,6 +2,8 @@ import frappe
 from library_management.search import MyAppSearch
 import random
 
+from frappe.rate_limiter import rate_limit
+
 @frappe.whitelist(allow_guest=True)
 def new_sign_up(username, email, phone):
     doc = frappe.get_doc({
@@ -96,7 +98,9 @@ def greet(name):
     return message
 
 # NOTE: Assignment 20
-@frappe.whitelist(allow_guest=True, rate_limit=10)
+
+@frappe.whitelist(allow_guest=True)
+@rate_limit(5)
 def limited_greeting():
     logger = frappe.logger()
     logger.info("Endpoint Called")

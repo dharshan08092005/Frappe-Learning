@@ -3,17 +3,56 @@
 
 import frappe
 
-
 def execute(filters=None):
-    filters = filters or {}
+    columns = [
+        {
+            "label": "Email",
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "width": 250,
+        },
+        {
+            "label": "Membership Type",
+            "fieldname": "membership_type",
+            "fieldtype": "Data",
+            "width": 180,
+        },
+        {
+            "label": "Amount",
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "width": 120,
+        },
+        {
+            "label": "Status",
+            "fieldname": "status",
+            "fieldtype": "Data",
+            "width": 120,
+        },
+    ]
 
-    report = frappe.get_doc("Report", "Script Report Builder")
-
-    columns = get_columns(report)
-    data = get_data(report, filters)
+    data = [
+        {
+            "email": "alice@example.com",
+            "membership_type": "Premium",
+            "amount": 1500,
+            "status": "Active",
+        },
+        {
+            "email": "bob@example.com",
+            "membership_type": "Basic",
+            "amount": 500,
+            "status": "Inactive",
+        },
+        {
+            "email": "charlie@example.com",
+            "membership_type": "Premium",
+            "amount": 1500,
+            "status": "Active",
+        },
+    ]
 
     return columns, data
-
 
 def get_columns(report):
     columns = []
