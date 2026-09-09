@@ -8,6 +8,7 @@
 
 | # | Assignment Name | Topic | Output Link |
 | :--- | :--- | :--- | :--- |
+| **19** | [Assignment 19](#assignment-19---guides-2) | `guides-2` (Development & Testing) | — |
 | **17** | [Assignment 17](#assignment-17---guides-1) | `guides-1` (Fixtures & Client Scripts) | — |
 | **—** | [bench-cli-sitemanagement](#assignment---bench-cli-sitemanagement) | Site Management CLI Commands | [🔗 View Output](https://drive.google.com/file/d/10ksBhbZAylt2Gy1X8zmed-51wZYIJ1An/view?usp=sharing) |
 | **10** | [Assignment 10](#assignment-10---js-frappe-realtime) | `js-frappe-realtime` | [🔗 View Output](https://drive.google.com/drive/folders/15ZkE4HSZySEUua99XAxuEcljeDwrn76D?usp=sharing) |
@@ -18,6 +19,16 @@
 | **5** | [Assignment 5](#assignment-5---basics-python-api) | `basics-python-api` | [🔗 View Output](https://drive.google.com/drive/folders/1pAwFNJJk__dj4E9x7p9B79ZGgmYGSNAK?usp=drive_link) |
 | **4** | [Assignment 4](#assignment-4---bench-cli-production) | `bench-cli-production` | [🔗 View Output](https://drive.google.com/file/d/1NyhtpVo0jxPu4LVK0dgv0aB3ZBrD_rRZ/view?usp=drive_link) |
 
+---
+
+## Assignment 19 - guides-3
+
+- **Topic:** `guides-3 Assignment`
+- **File Paths:**
+  - `library_management/www/article.html`
+  - `library_management/www/article.py`
+  - `library_management/library/doctype/article/article.py`
+  - `library_management/library/doctype/article/test_article.py`
 ---
 
 ## Assignment 17 - guides-1
